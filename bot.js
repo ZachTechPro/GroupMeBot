@@ -11,6 +11,9 @@ function respond() {
   var coolGuyRegex = /^\/cool guy$/;
   var testRegex =  /^\/test$/;
 
+  handleCoolGuy(request, coolGuyRegex);
+  handleTest(test, testRegex);
+
 }
 
 function handleTest(request, testRegex){
