@@ -3,13 +3,15 @@ var cool = require('cool-ascii-faces');
 
 var botID = process.env.BOT_ID;
 
+// This is the function where the bot gets the commands
 function respond() {
-  var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/cool guy$/;
+  //Here is the request
+  var request = JSON.parse(this.req.chunks[0])
+  var coolGuyRegex = /^\/cool guy$/;
 
-  if(request.text && botRegex.test(request.text)) {
+  if(request.text && coolGuyRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage();
+    postCoolGuyMessage();
     this.res.end();
   } else {
     console.log("don't care");
@@ -18,7 +20,7 @@ function respond() {
   }
 }
 
-function postMessage() {
+function postCoolGuyMessage() {
   var botResponse, options, body, botReq;
 
   botResponse = cool();
