@@ -1,6 +1,6 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
-var test = require('funny-commands');
+//var test = require('funny-commands');
 
 var botID = process.env.BOT_ID;
 
@@ -12,7 +12,7 @@ function respond() {
   var testRegex =  /^\/test$/;
 
   handleCoolGuy(request, coolGuyRegex);
-  handleTest(test, testRegex);
+ // handleTest(test, testRegex);
 
 }
 
